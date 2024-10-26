@@ -1,4 +1,4 @@
-name: PR Checks for maintaining code quality
+name: Code quality
 on: pull_request
 
 jobs:
