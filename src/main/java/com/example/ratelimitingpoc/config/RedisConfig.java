@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Primary;
 
 import javax.cache.CacheManager;
 import javax.cache.Caching;
+import javax.cache.spi.CachingProvider;
 
 @Configuration
 public class RedisConfig
@@ -26,7 +27,7 @@ public class RedisConfig
 
     @Bean
     public CacheManager cacheManager(Config config) {
-        CacheManager manager = Caching.getCachingProvider().getCacheManager();
+        CacheManager manager = Caching.getCachingProvider("org.redisson.jcache.JCachingProvider").getCacheManager();
         manager.createCache("cache", RedissonConfiguration.fromConfig(config));
         return manager;
     }

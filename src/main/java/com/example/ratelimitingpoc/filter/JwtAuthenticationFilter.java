@@ -1,6 +1,6 @@
 package com.example.ratelimitingpoc.filter;
 
-import com.example.ratelimitingpoc.UrlPatternMatcher;
+import com.example.ratelimitingpoc.utils.UrlPatternMatcher;
 import com.example.ratelimitingpoc.exception.TooManyRequests;
 import com.example.ratelimitingpoc.service.JwtService;
 import com.example.ratelimitingpoc.service.RateLimitService;
@@ -22,7 +22,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
