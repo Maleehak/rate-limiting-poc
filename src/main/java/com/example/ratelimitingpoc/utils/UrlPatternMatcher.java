@@ -1,4 +1,4 @@
-package com.example.ratelimitingpoc;
+package com.example.ratelimitingpoc.utils;
 
 import org.springframework.util.AntPathMatcher;
 
